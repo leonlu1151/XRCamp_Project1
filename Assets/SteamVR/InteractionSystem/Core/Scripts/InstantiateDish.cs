@@ -13,11 +13,13 @@ namespace Valve.VR.InteractionSystem.Sample
         private AudioSource back;
         public AudioClip music;
         public GameObject dishes;
+        public GameObject canvas;
         
         protected override void OnButtonClick()
         {
             base.OnButtonClick();
 
+            canvas.SetActive(true);
             dishes.SetActive(true);
             gameObject.SetActive(false);
 

@@ -30,7 +30,10 @@ public class ArcadeHitted : MonoBehaviour
     public AudioClip win_music;
     public AudioClip loose_music;
     public AudioClip hit_music;
-    
+    public GameObject hands_canvas;
+    public GameObject feet_canvas;
+    public GameObject final_canvas;
+
 
     void Start()
     {
@@ -89,14 +92,17 @@ public class ArcadeHitted : MonoBehaviour
         gacha.SetActive(false);
         if (gacha_count == 1)
         {
+            hands_canvas.SetActive(true);
             hands.SetActive(true);
         }
         else if (gacha_count == 2)
         {
             feet.SetActive(true);
+            feet_canvas.SetActive(true);
         }
         else if (gacha_count == 3)
         {
+            final_canvas.SetActive(true);
             fish.SetActive(true);
             monster1.SetActive(true);
             monster2.SetActive(true);
